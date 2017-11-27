@@ -7,9 +7,8 @@ Parameters:
   ProjectId:
     Type: String
     Description: Time Function
-
 Resources:
-  GetHelloWorld:
+  TimeResouce:
     Type: AWS::Serverless::Function
     Properties:
       Handler: index.handler
@@ -23,3 +22,17 @@ Resources:
           Properties:
             Path: /TimeResource
             Method: get
+  TimeResouce:
+      Type: AWS::Serverless::Function
+      Properties:
+        Handler: index.options
+        Runtime: nodejs4.3
+        Role:
+          Fn::ImportValue:
+            !Join ['-', [!Ref 'ProjectId', !Ref 'AWS::Region', 'LambdaTrustRole']]
+        Events:
+          OptionEvent:
+            Type: Api
+              Properties:
+                Path: /TimeResource
+                Method: option
