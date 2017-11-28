@@ -1,4 +1,4 @@
-'use strict';
+''use strict';
 
 var time = require('time');
 exports.handler = (event, context, callback) => {
@@ -14,6 +14,7 @@ exports.handler = (event, context, callback) => {
 exports.options = (event, context, callback) => {
     callback(null, {
         statusCode: '200',
-        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "OPTIONS, GET"}
+        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "OPTIONS, GET", "Access-Control-Allow-Headers":"Content-Type, client_id, client_secret"}
     });
 };
+
