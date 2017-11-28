@@ -14,7 +14,7 @@ exports.handler = (event, context, callback) => {
 exports.options = (event, context, callback) => {
     callback(null, {
         statusCode: '200',
-        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "OPTIONS, GET", "Access-Control-Allow-Headers":"Content-Type, client_id, client_secret"}
+        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "OPTIONS, GET", "Access-Control-Allow-Headers":"Content-Type, client_id, client_secret"},
     });
 };
 
