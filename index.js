@@ -1,4 +1,4 @@
-''use strict';
+'use strict';
 
 var time = require('time');
 exports.handler = (event, context, callback) => {
