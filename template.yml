@@ -33,6 +33,6 @@ Resources:
         Events:
           OptionEvent:
             Type: Api
-              Properties:
-                Path: /TimeResource
-                Method: option
+            Properties:
+              Path: /TimeResource
+              Method: option
