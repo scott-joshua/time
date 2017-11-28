@@ -6,7 +6,7 @@ exports.handler = (event, context, callback) => {
     currentTime.setTimezone("America/Denver");
     callback(null, {
         statusCode: '200',
-        headers: {"Access-Control-Allow-Origin": "*"},
+        headers: {"Access-Control-Allow-Origin": "*", "Access-Control-Allow-Headers":"Content-Type, client_id, client_secret"},
         body:  JSON.stringify({ time:currentTime.getTime()}),
     });
 };
